@@ -1,0 +1,65 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 2 Oct 20-Oct 27, 2024
+# Sprint 2 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.001 : kakkarm2 : Complete
+NAME     : Squares.
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL : 30 mins
+AS A     : user
+I WANT   : To be able to click on a button to select the square, click to
+           indicate where the top left corner of the square should be,
+           drag to resize the square, and finally release the mouse button
+           to indicate that I have drawn the square.
+SO THAT  : I can add squares to my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.002 : abouzah7 : Complete
+NAME     : Ovals.
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL : 3 hours
+AS A     : user
+I WANT   : To be able to click on a button to select the oval tool, click
+           to specify the center of the oval, drag the mouse to resize the
+           oval, and finally release the mouse and have the program draw
+           the oval on the canvas.
+SO THAT  : I can add ovals to my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.003 : kakkarm2,linryan5 : Complete
+NAME     : Draw Upright Triangle
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 days (1 hours across)
+AS A     : user
+I WANT   : To click the center of the triangle, and release for
+           a triangle to be drawn. The user should also be able to drag
+           the triangle
+           and adjust it according to their liking.
+SO THAT  : I can add triangles to the canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.004 : kakkarm2,linryan5 : Complete
+NAME     : Draw Upright Triangle Feedback
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 days (1 hours across)
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback and Draw Rectangle Feedback,
+           we should display the triangle mid-construction.
+SO THAT  : I can see the triangle I am about to build, on release of the
+           mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG?.003 : kakkarm2, linryan5, sperneac  : Complete(?)
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------

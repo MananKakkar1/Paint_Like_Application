@@ -1,0 +1,151 @@
+(replicate sections below for each feature you want to highlight)
+--------------------------------------------------------------------------------
+FeatureName: Save+Open
+
+Description: 
+	One is able to save their current drawings on the canvas as a
+	"drawing file" using the "Save" button located in the dropdown menu
+	under "File".
+	Then, the user is able to also open their saved version of drawings using
+	the "Open" button located in the dropdown menu under "File".
+
+Reference: 
+	US2.017+US4.009
+--------------------------------------------------------------------------------
+FeatureName: Dark Mode/Light Mode
+
+Description: 
+	On the click of a button, the user is able to switch the theme of the
+	window to "Dark Mode". The user can then press the button again,
+	which allows them to switch the theme back to light mode.
+	On the press of the button, not only does the theme of the
+	window change, the application defaults the color to "White" when changing
+	to dark mode, and defaults the color to "Black" when changing to
+	light mode. This option is located under the "Edit" dropdown menu.
+	Another feature includes, the changing of the colors of Eraser depending
+	on which mode the user is currently in. In general, the eraser color is
+	switched to match the current background color.
+
+
+Reference: 
+	US2.019
+--------------------------------------------------------------------------------
+FeatureName: Undo/Redo
+
+Description:
+	On the click of a button named "Undo", the user is able to undo their last
+	drawing, removing it from the canvas. Then, the user can click the "Redo"
+	button, allowing them to bring back the drawing that was undone.
+
+Reference:
+	US2.015+BUG4.001
+--------------------------------------------------------------------------------
+FeatureName: Clear
+
+Description:
+	On the click of the button named "Clear", the user can clear the current
+	canvas of all drawings. This feature also clears the items that have been
+	undone, not allowing the user to bring back any drawings
+	by pressing "Redo".
+
+
+Reference:
+	BUG4.001+US2.016
+--------------------------------------------------------------------------------
+FeatureName: Fill
+
+Description:
+	The fill button allows the user to draw filled in shapes. This button is
+	originally turned "On" as the user will see that the button is highlighted
+	when they first run the program. When the user clicks this button, the
+	shapes will being hollow when drawn and the button will no longer be
+	highlighted, indicating it is "Off".
+
+
+Reference:
+	US3.005+BUG2.005
+--------------------------------------------------------------------------------
+FeatureName: Color Picker
+
+Description:
+	The user can open a dropdown menu indicated by the name of a color,
+	allowing the user to pick through a wide selection of colors to draw with.
+	The user also has an option to make their own custom colors which will be
+	clearly indicated in the dropdown menu for the color picker.
+
+
+Reference:
+	US2.012+BUG3.001+US3.006+US2.018
+--------------------------------------------------------------------------------
+FeatureName: Line Thickness Selector
+
+Description:
+	Using a slider in the toolbar, the user can adjust the thickness of
+	the shape/line they are looking to draw. There also exist a preview of the
+	thickness that is adjusted by the slider, indicating how wide the
+	shape/line would be.
+
+
+Reference:
+	US?.007
+--------------------------------------------------------------------------------
+FeatureName: New
+
+Description:
+	This feature allows the user to open a new window to work in.
+	When clicking this button in the "File" dropdown menu, the user is prompted
+	whether they would like to save their progress or not. If the user clicks
+	no, the canvas is cleared, allowing the user to start a new drawing.
+
+
+Reference:
+	US2.017+US4.009
+--------------------------------------------------------------------------------
+FeatureName: Erasers
+
+Description:
+	This feature allows the user to pick between 3 types of erasers, including
+	small, medium and large, represented by "Eraser S", "Eraser M" and
+	"Eraser L" respectively. This allows the user to erase their work.
+
+
+Reference:
+	US1.013+US3.001+US2.018+US2.019
+--------------------------------------------------------------------------------
+FeatureName: Shape Buttons Feedback + Line Thickness Preview Feedback
+
+Description:
+	Allows the user to see what they are going to draw. When changing colors,
+	the icons of the buttons of each shape are updated to match the currently
+	selected color. This also applies to the fill button, if the button is "On"
+	, the user can see that the icons of the shape buttons are filled in, and
+	vice versa.
+
+
+Reference:
+	US4.008
+--------------------------------------------------------------------------------
+FeatureName: Bézier Curves
+
+Description:
+	This button exists in the area of the shape buttons. It is indicated by
+    a semi parabola on the bottom right of the collection of shape buttons.
+    This allows the user to draw Bézier curves onto the canvas.
+
+
+Reference:
+	US4.008
+--------------------------------------------------------------------------------
+FeatureName: Poly Line
+
+Description:
+	This button exists in the collection of shape buttons. It is indicated by
+	a cluster of straight lines with sharp angles. This button allows the user
+	to draw poly lines. To stop drawing a poly line without selecting another
+	button, the user can right-click on their mouse. This will stop creating
+	the current polyline and allow the user to make a new one.
+
+
+Reference:
+	US2.003+BUG3.001
+--------------------------------------------------------------------------------

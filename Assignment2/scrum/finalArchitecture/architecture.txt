@@ -1,0 +1,421 @@
+# Architecture
+
+# MVC
+# ModelClasses
+	PaintModel
+# ViewClasses
+	View
+# ControllerClasses
+	PaintPanel
+	ShapeChooserPanel
+	UndoRedoPanel
+
+# Command
+# CommandClasses
+    DrawCommand
+    ActionCommand
+# InvokersClasses
+    ActionInvoker
+    DrawInvoker
+# ConcreteCommandClasses
+    DrawBezier
+    DrawCircle
+    DrawOval
+    DrawPolyLine
+    DrawSquare
+    DrawSquiggle
+    DrawTriangle
+    EraserCommand
+    ActionClear
+    ActionColor
+    ActionFill
+    ActionLoad
+    ActionNew
+    ActionRedo
+    ActionSave
+    ActionUndo
+# ClientClasses
+    PaintPanel
+    UndoRedoPanel
+    ShapeChooserPanel
+# ReceiverClasses
+    PaintModel
+    PaintPanel
+
+# Factory
+# CreatorClasses
+    DrawingFactory
+# ConcreteCreatorClasses
+    BezierFactory
+    CircleFactory
+    OvalFactory
+    PolyLineFactory
+    RectangleFactory
+    SquareFactory
+    SquiggleLineFactory
+    TriangleFactory
+# ProductClasses
+    Lines
+    Drawing
+    Shape
+# ConcreteProductClasses
+    Bezier
+    Circle
+    Eraser
+    Oval
+    Point
+    PolyLine
+    Rectangle
+    Square
+    SquiggleLine
+    Triangle
+
+
+# Design Patterns Used (collections of classes into DP)
+--------------------------------------------------------------------------------
+Name: Command
+Pattern Name: Command
+Reference:
+	https://refactoring.guru/images/patterns/diagrams/command/
+	solution3-en.png?id=c92f6874b95de46b041499d41234b00b
+
+Purpose:
+    The purpose of implementing this design pattern is simple: it promotes easy
+    code expandability.
+
+    The command design pattern allows for the program to take the client's
+    inputs and parameterize it such that the program output exactly what the
+    end user requires.
+
+    Notice that by implementing the Command design pattern, each command has a
+    single purpose. An example of this is ActionSave is only used to Save the
+    drawings into the user's computer, while the ActionLoad is only used to
+    load drawings from the user's computer. Both commands don't require
+    an interface such as DrawCommand (the command design for drawing modes),
+    nor require things from each other to function.
+
+    This
+
+
+UML:
+	See command.png in finalArchitecture Folder for UML diagram.
+
+Classes:
+    ActionCommand: Command
+    DrawCommand: Command
+    ActionClear: ConcreteCommand
+    ActionColor: ConcreteCommand
+    ActionFill: ConcreteCommand
+    ActionLoad: ConcreteCommand
+    ActionNew: ConcreteCommand
+    ActionRedo: ConcreteCommand
+    ActionSave: ConcreteCommand
+    ActionUndo: ConcreteCommand
+    DrawBezier: ConcreteCommand
+    DrawCircle: ConcreteCommand
+    DrawOval: ConcreteCommand
+    DrawPolyLine: ConcreteCommand
+    DrawSquare: ConcreteCommand
+    DrawSquiggle: ConcreteCommand
+    DrawTriangle: ConcreteCommand
+    EraserCommand: ConcreteCommand
+    ActionInvoker: Invoker
+    DrawInvoker: Invoker
+    UndoRedoPanel: Client
+    ShapeChooserPanel: Client
+    PaintPanel: Client, Receiver
+    PaintModel: Receiver
+
+Usage:
+    Future developers playing around with this code may use the command pattern
+    to specify exactly what the type of shape they are aiming for, and
+    parameterize what the client requests for a shape should they implement a
+    new drawing mode.
+
+    If developers are modifying the command (or adding new ones), simply decide
+    if the command is one for drawing (i.e. a new drawing mode), or one that
+    does some sort of external change (i.e. something like color), and implement
+    the correct command interface. Add it into the invoker's arraylist and add
+    the case to the runInvoker function.
+--------------------------------------------------------------------------------
+Name: Shapes
+Pattern Name: Factory Method
+Reference: https://refactoring.guru/images/patterns/diagrams/factory-method/
+           structure.png
+
+Purpose:
+	The purpose of the implementation of this design pattern was to streamline
+	the creation of different shapes onto the canvas, while also maintaining
+	ease of use and flexibility in the design.
+
+	Factories are a design pattern which allows for the user to create similar
+	objects without a care in the world about how they are made.
+
+	By utilizing a factory method design pattern, this allows for developers
+	to create new drawing methods in a simple manner; simply create a factory,
+	create a new drawing shape, and finally implement it into the invoker via
+	a command. The factory will handle the creation of the shape, while the
+	shape itself will be defined as what the factory has been told. The
+	command does the math, and the invoker is used to signal the request to
+	create a new shape.
+
+	As each factory is designed to only produce a specific shape, it also
+	helps developers understand what factory is producing what. On the other
+	hand, similar shapes also extend from each other (i.e. circle is an
+	extension of the oval, which circles themselves do not require any
+	changes to the oval code).
+
+	Note that this factory method has been modified slightly; the command
+	design has been slightly integrated into the factory design (this was to
+	encapsulate the creation of shapes into ont unified command structure).
+
+UML:
+    See factories.png for the UML diagram of the classes.
+
+Classes:
+	(list classes involved and their roles based on Reference above)
+    DrawingFactory: Creator
+    BezierFactory: ConcreteCreator
+    CircleFactory: ConcreteCreator
+    OvalFactory: ConcreteCreator
+    PolyLineFactory: ConcreteCreator
+    RectangleFactory: ConcreteCreator
+    SquareFactory: ConcreteCreator
+    SquiggleLineFactory: ConcreteCreator
+    TriangleFactory: ConcreteCreator
+    Lines: Product
+    Drawing: Product
+    Shape: Product
+    Bezier: ConcreteProduct
+    Circle: ConcreteProduct
+    Eraser: ConcreteProduct
+    Oval: ConcreteProduct
+    Point: ConcreteProduct
+    PolyLine: ConcreteProduct
+    Rectangle: ConcreteProduct
+    Square: ConcreteProduct
+    SquiggleLine: ConcreteProduct
+    Triangle: ConcreteProduct
+
+Usage:
+	Developers may play around with the factory portions by attempting
+	to create new drawing modes. To do this, they will first have to create
+	a new type of drawing by implementing the drawing interface, then create the
+	new factory associated with the new shape/polygon, and finally implement the
+	associate command, add that into the invoker.
+
+--------------------------------------------------------------------------------
+
+
+# High Level Architecture Discussion
+
+	(Put all of the above together in a collection of stories which tell the
+	developer how to modify, extend, or understand your code)
+
+	(For each story, pull from and modify the highLevelTemplate.txt)
+--------------------------------------------------------------------------------
+New Drawing Mode:
+Description:
+	A new drawing mode is a new mode that the user can draw a new type of
+	shape onto the canvas. Users are able to click on a spot in the canvas to
+	indicate the starting point of the shape, and drag the mouse around to
+	witness how the shape will be placed upon canvas, and finally release the
+	mouse to place the shape onto the canvas.
+
+	For a user to indicate that they want to draw with a specific shape, the
+	users must click on one of the icons in the top left corner of the UI
+	(where it states shapes). The selected shape will then be highlighted blue,
+	indicating that the desired shape drawing command has been chosen. Upon
+	the mouse event of clicking, the things stated above this paragraph occurs.
+
+	Drawing modes should also follow the mouse position when displaying a
+	preview to the user what the shape looks like before releasing the mouse
+	button (i.e. observe how ovals are drawn onto the canvas as an example),
+	and should also inherit the specified outline width and color.
+
+	Finally, new drawing modes should also be savable into the user's
+	computer.
+
+Implementation:
+    To add a new drawing mode named X, simply create the following classes:
+        - X, which implements the Shape/Line interface, depending on the type
+          of drawing mode it is.
+        - XFactory, which is the dedicated factory that produces X. This
+          should implement DrawingFactory, and be creating X with some
+          parameters.
+        - drawX, which is the command that is executed when attempting to
+          draw with X. This should inherit the drawCommand interface. Note
+          that PaintModel's remove previous should be used towards the end of
+          the creation of the shapes' preview.
+
+	(inventory of ideas, required files, how they are tied to the architecture,
+		naming conventions (example: images/ButtonIconSquare.jpg, MHStrategySquare, ShapeSquare...)
+
+	To add a new drawing mode named X provide...
+
+	Things that must change when creating the new drawing mode:
+
+	ShapeChooserPanel:
+	    Add onto the buttonLabels array with the new mode,
+	    and create a new shape using the javafx.scene.shape.Polygon()
+	    input for its icon.
+
+	PaintModel:
+	    Simply add a new function titled addX for the shape.
+
+	drawX:
+		Drawing the new shape X has the following properties when dealing
+		with the mouse events:
+		    - Upon clicking of the mouse, the position where the mouse was
+		      clicked is stored, and serves as the anchor point. This is where
+		      the top left of the X should be.
+		    - when dragging the mouse, the shape should update its top left
+		      corner to where the mouse is, while still maintaining original
+		      top left position as an anchor point. this can be done with the
+		      math present in the other drawCommand commands. The previous
+		      preview of the shape should be removed.
+		    - Upon releasing the mouse button, the shape should be added to
+		      the model with the appropriate addX command from model
+
+	PaintShape:
+		The shape X should have the following properties:
+		    - It should be filled or be an outline, depending on the
+		      outline flag present in the paint panel.
+		    - If X is filled, then the color of the shape is determined by
+		      the current color, which is selected by the user from the view.
+		    - If X is an outline, then the width of the outline is determined
+		      from the currentStrokeWidth variable, also obtained from the
+		      user in the View.
+
+Example:
+	To draw a Triangle:
+	    - Triangle.java, inherits from Shape interface
+	    - TriangleFactory, where the triangles are indeed mass produced
+	        (inherits from the DrawingFactory).
+	    - drawTriangle, the command to make the triangle
+	    - Modify a bit of PaintModel to add triangles to the arraylist of shapes
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+UI Expandability:
+Description:
+    The UI is how the main application is formatted. one can add new nodes to it
+    or even adjust the way it looks by changing the main BorderPane to a
+    GridPane, for more precision in the placement in nodes. The UI should always
+    maintain simplicity, ease of use and readability to ensure that the user
+    can optimally use it.
+
+
+
+Implementation:
+    The UI is created by view.java where it gathers information from each of the
+    three panels such as paintPanel. To expand the UI, one must do either three
+    of the following things.
+    	1. Add new node into view.java itself by creating the node in the
+    	constructor and add it to the main BorderPane which contains all the sub
+    	panels. One could also add nodes to the menuBar by simply creating a new
+    	MenuItem in the method that creates the menu. They would also have to
+    	add commands for this new node in the handle method of view.java which
+    	would make sure that the button actually does something. Also, depending
+    	on whether the node is going to handle more than action events or mouse
+    	events, one must create a new invoker class to handle the different
+    	kind of event. One must also create a new command interface and make the
+    	concrete command class which will actually implement the functionality
+    	of what needs to be added.
+    	2. Add new node into one of the existing panels. Depending on which panel
+    	the new node is inserted into, a different type of event will be called.
+    	For example, ShapeChooserPanel invokes mouseEvents to create new shapes,
+    	UndoRedoPanel invokes actionEvents to add implementations to buttons.
+    	Again, to create the implementation for the node, one must
+    	create a new invoker class to handle the different
+        kind of event. One must also create a new command interface and make the
+        concrete command class which will actually implement the functionality
+        of what needs to be added.
+        3. Add a new panel. To do this, one must follow the same way each of the
+        other classes of panels are implemented, such implementing EventHandler.
+        One must also adjust view.java to make space for this new panel,
+        specifically adding space for the panel in the BorderPane. Then one must
+        again add a new invoker class to handle the different
+        kind of event. One must also create a new command interface and make the
+        concrete command class which will actually implement the functionality
+        of what needs to be added. And depending on which type of event they want
+        the node to create, they must either create a new invoker or add to the
+        current existing ones such as ActionInvoker for actionEvents and
+        DrawInvoker for mouseEvents.
+
+
+Example:
+	To add a new shape, one must go to the ShapeChooserPanel file and
+	add a new label in the list of labels as well as add a graphic
+	to represent the shape by. This will create a new button with no other
+	changes necessary. One must then go ahead and create a new DrawCommand to
+	make sure their new drawing is implemented correctly.
+--------------------------------------------------------------------------------
+New Command:
+Description:
+	A new action command is a command which, when the user toggles or modifies
+	it, changes a property in PaintPanel which reflects across for every shape,
+	and is reflected back to the view. Alternatively, it is a command which
+	changes something in the display of the View, or does something external
+	such as opening or loading files into the PaintPanel.
+
+	Depending on the context of what the action command should do, the user
+	can have the option of:
+	    - Pressing a button to toggle a property of the shapes on or off.
+	    - have a large variety of button to choose from to change some
+	      shape property.
+	    - Be given a slider to change the value of a shape property
+	      seamlessly.
+	    - Pressing a button changes something in the model, such as undo/redo
+	      an action done by the user, or
+	    - Open a new window to do something else, such as save/load files,
+	      or open them.
+
+	Commands will always set the mode to their name, and then revert back to
+	the previous drawing mode once they have been executed; this is to reduce
+	the amount of clicking required to change things. Finally, Commands differ
+	from drawing modes as they change properties of shapes, modify the
+	view in a specific way, or perform an external operation, rather than
+	choosing what the user can draw on the canvas.
+
+Implementation:
+    To add a new command mode named X, simply create the following classes:
+        - ActionX, which implements the ActionCommand Interface.
+
+	Things that must change when creating the new drawing mode:
+
+	UndoRedoPanel:
+	    If developers are implementing a new command and wish to add a simple
+	    button (without expanding the UI), then simply add X into the
+	    buttonLabels list. Then, depending on whether it is a toggleable
+	    feature, add X into the conditional. (i.e. add it as an or case).
+
+	ActionInvoker:
+        Simply add into the actionCommands arraylist the ActionX command
+        with the appropriate parameters.
+        Also create a new case for the action command X in the switch
+        case in the runInvoker method.
+
+	PaintPanel, all the Drawings:
+	    If the command does indeed change a property of the shapes, then
+	    it must be reflected in the PaintPanel and every single shape
+	    currently present.
+
+	View:
+	    If the command needs a new category/button, then it can be done
+	    in the view. Refer to the UI Expandability section for more details
+	    about how to change the UI to reflect the needs of the user.
+
+	PaintPanel:
+	    If the change that the command is doing must directly affect the
+	    model, then the change must also be done in the PaintModel file as
+	    well. The call for this should be found in the ActionInvoker.
+
+Example:
+	To clear the canvas:
+	    - See PaintModel's methods for clearing the shapes.
+	    - ActionClear calls this method.
+	    - ActionInvoker checks for the mode. If the mode matches "Clear", then
+	      clear the panel.
+	    - UndoRedoPanel, where the button for it is created.
+	    - View, for how the panel is set in the UI.
+--------------------------------------------------------------------------------

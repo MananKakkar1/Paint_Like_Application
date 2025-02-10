@@ -1,0 +1,151 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 4 Nov 10-Nov 10, 2024
+# Sprint 4 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.018 : kakkarm2 : Complete
+NAME     : UI Overhaul
+PRIORITY : 4
+ESTIMATE : 3 days   ACTUAL : 2 days
+AS A     : user
+I WANT   : The UI to look nice. Right now, it has buttons all over the
+           place.
+           Also implement color picker as a dropdown menu to reduce space
+           for choosing colors in the area of the buttons.
+SO THAT  : The UI is pleasant to look at and it is convenient for the user
+           to use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.019 : kakkarm2 : Complete
+NAME     : Dark Mode
+PRIORITY : 4
+ESTIMATE : 6 hours    ACTUAL : 3 hours
+AS A     : user
+I WANT   : The user to be able to pick between light mode and dark mode.
+SO THAT  : The UI's theme can be chosen at the user's preference.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.012 : kakkarm2 : Complete
+NAME     : Select from a wide range of colors
+PRIORITY : 3
+ESTIMATE : 4 days    ACTUAL : < 1 hour
+AS A     : user
+I WANT   : To be able to use my own colors as a fill or outline by
+           specifying them via something like a color wheel, or perhaps
+           specifying the hex or RGB codes into some prompter, or perhaps
+           something like color bars.
+SO THAT  : I can choose custom colors that are not preset ones.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.005 : sperneac+kakkarm2 : Complete
+NAME     : Bézier curves
+PRIORITY : 4
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To click and drag a line, then click again twice to curve the
+           line.
+SO THAT  : I can draw Bezier curves.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.007 : kakkarm2 : Complete
+NAME     : Bézier curves feedback
+PRIORITY : 4
+ESTIMATE : 2 hours    ACTUAL : 30 minutes
+AS A     : user
+I WANT   : To be able to see the original line.
+SO THAT  : I can get a better idea of what the final Bézier curve will
+           look like.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US5.003 : linryan5 : Complete
+NAME     : Final model architecture
+PRIORITY : 3
+ESTIMATE : 3 days    ACTUAL : 2-3 days
+AS A     : user
+I WANT   : To have a better implementation of model. Currently, PaintModel
+           implementation is still the same as the previous iterations,
+           so this US is dedicated to architecture the model, as well
+           as clean up the other architecture in the program (notably, the
+           command structure is still very wonky).
+SO THAT  : I can easily implement more features, and have cleaner code to
+           view.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.001 : linryan5 : Complete
+NAME     : Feedback is weird
+PRIORITY : 2
+ESTIMATE : 1 day     ACTUAL : 2 hours
+ISSUE    : Feedback seems to be mirrored when attempting to draw in the
+           opposite direction of where the shape is growing. Most obvious
+           in the triangle shape, but also present in the rectangle shape
+           as well.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.001 : linryan5 : Complete
+NAME     : Previous mode selection
+PRIORITY : 2
+ESTIMATE : 1 day.     ACTUAL : < 1 hour
+ISSUE    : Currently, when selecting things such as undo, redo, or trying
+           to select a new color, I have to reselect the shape I was using
+           previously. This feels very counterintuitive to use, and would
+           like this changed so that the program remembers what the
+           previous selection was.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.005 : kakkarm2 : Complete
+NAME     : Fill Button Defaulting Color to Black
+PRIORITY : 4
+ESTIMATE : 1 hour     ACTUAL : 30 minutes
+ISSUE    : Currently, when selecting the toggle button for fill, the
+           button defaults to the color black, instead it should switch to
+           the current selected color.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.008 : sperneac : Complete
+NAME     : ShapeChooserButtons feedback
+PRIORITY : 4
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : The button to show a preview of what shape will be drawn along
+           with the color and fill.
+SO THAT  : I can see what the shape will look like before being drawn.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.009 : sperneac : Complete
+NAME     : File saving and loading to computer
+PRIORITY : 4
+ESTIMATE : 1 hours    ACTUAL : 45 minutes
+AS A     : user
+I WANT   : To be able to save files to the computer instead of only
+           saving them temporarily in the program.
+SO THAT  : I can preserve my beautiful artwork even when the program
+           is not open.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US?.007 : sperneac : Complete
+NAME     : Line thickness selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined
+           	rectangle as well as two thickly outlined rectangles and a
+           	thick squiggle.
+SO THAT  :
+--------------------------------------------------------------------------

@@ -1,0 +1,282 @@
+# Fill in, commit and push each day.
+Member name: Manan Kakkar   email: manan.kakkar@mail.utoronto.ca     utorid: kakkarm2
+
+Oct 14,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - N/A
+	Obstacles I face:
+	    - N/A
+
+Oct 15,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - N/A
+	Obstacles I face:
+	    - N/A
+
+Oct 16,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - Added 2 User Stories
+	    - Work on BUG1.005
+	Obstacles I face:
+        - Learn how to push and create local branches to remote repo.
+Oct 17,2024
+	What I did yesterday:
+	    - Added 2 User Stories
+	What I will do today:
+	    - Help with merging branches
+	Obstacles I face:
+	    -N/A
+
+Oct 18,2024
+	What I did yesterday:
+	    - Helped with merging branches
+	What I will do today:
+	    -N/A
+	Obstacles I face:
+        -N/A
+
+Oct 19,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - Help fix errors with ShapeChooserPanel and help with merging branches
+	Obstacles I face:
+	    - Some overwriting issues with merging. However, in the end was able to fix them.
+
+Oct 20,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - Adding and finishing architecture.txt discussions
+	Obstacles I face:
+        - N/A
+Oct 21,2024
+	What I did yesterday:
+	    - Added architecture plans
+	What I will do today:
+	    - Have a scrum meeting and discuss what needs to be done in sprint 2. Also discussed how
+	    we will split the Bugs/US.
+	Obstacles I face:
+	    - N/A
+
+Oct 22,2024
+	What I did yesterday:
+	    - Have a scrum meeting and discuss what needs to be done in sprint 2. Also discussed how
+          	    we will split the Bugs/US.
+	What I will do today:
+	    - Discuss architecture
+	Obstacles I face:
+	    - N/A
+
+Oct 23,2024
+	What I did yesterday:
+	    - Discussed architecture
+	What I will do today:
+	    - N/A
+	Obstacles I face:
+	    - N/A
+
+Oct 24,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - Add the square shape to be drawn in the paint gui. To do this I added a square class
+	    which inherited everything from the rectangle class.
+	Obstacles I face:
+        - Fix the shape mirror case where you can draw any shape in the opposite direction as well.
+        (This will be a bug for upcoming sprint)
+Oct 25,2024
+	What I did yesterday:
+	    - Tried to fix the shape mirror problem and added the square shape to paint.
+	What I will do today:
+	    - Update springBacklog2 and my dailScrumMeeting file.
+	Obstacles I face:
+	    - N/A
+
+Oct 26,2024
+	What I did yesterday:
+	    - Updated backlog and dailyScrumMeeting file.
+	What I will do today:
+	    - Talk about re-architecting everything and finalize the idea.
+	Obstacles I face:
+	    - N/A
+
+Oct 27,2024
+	What I did yesterday:
+	    - Talk about re-architecting everything and finalize the idea.
+	What I will do today:
+	    - Implement the re-architecture and implement the factory method for the creation of each shape.
+	    - Also reimplemented the factory design pattern I made in order to match the fact that a Square is also a
+	      Rectangle and a Circle is also an Oval.
+	Obstacles I face:
+	    - Implement factory design and update PaintPanel with the new SquiggleLine object and implement a different way
+	      of drawing Squiggles with the SquiggleLine class.
+
+Oct 28,2024
+	What I did yesterday:
+	    - Implement the re-architecture and implement the factory method for the creation of each shape.
+        - Also reimplemented the factory design pattern I made in order to match the fact that a Square is also a
+          Rectangle and a Circle is also an Oval.
+	What I will do today:
+	    - Add a new user story.
+	Obstacles I face:
+	    - N/A
+
+Oct 29,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - N/A
+	Obstacles I face:
+	    - N/A
+
+Oct 30,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - Discuss and think about how to implement the eraser and undo/redo buttons
+	Obstacles I face:
+	    - N/A
+
+Oct 31,2024
+	What I did yesterday:
+	    - Discuss and think about how to implement the eraser and undo/redo buttons
+	What I will do today:
+	    - N/A
+	Obstacles I face:
+	    - N/A
+
+Nov 1,2024
+	What I did yesterday:
+	    - N/A
+	What I will do today:
+	    - Start and finish Eraser Tool and Undo/Redo feature
+	Obstacles I face:
+	    - Redoing some implementations of paintmodel.
+
+Nov 2,2024
+	What I did yesterday:
+	    - Start and finish Eraser Tool and Undo/Redo feature
+	What I will do today:
+	    - Add New/Open/Save Features
+	    - Help merge to master and do pull requests as well.
+	Obstacles I face:
+	    - Making new methods in PaintPanel for handling action events instead of mouse events.
+        - Merge to master from outdated branches caused many merge conflicts.
+Nov 3,2024
+	What I did yesterday:
+	    - Add New/Open/Save Features
+        - Help merge to master and do pull requests as well.
+	What I will do today:
+	    - 2 pull requests and merge to master, finishing all user stories/bugs for sprint 3.
+	    - Updated sprintBacklog3 as well.
+	Obstacles I face:
+	    - N/A
+
+Nov 4,2024
+	What I did yesterday:
+	    - 2 pull requests and merge to master, finishing all user stories/bugs for sprint 3.
+    	- Updated sprintBacklog3 as well.
+	What I will do today:
+	    - Finish UI overhaul and change color selection to color picker.
+	    - put in a pull request
+	Obstacles I face:
+	    - Losing focus from color picker window resulting in total focus loss (fixed).
+
+Nov 5,2024
+	What I did yesterday:
+	    - Finish UI overhaul and change color selection to color picker.
+        	    - put in a pull request
+	What I will do today:
+	    - Bug fixes
+	    - Add dark mode
+	Obstacles I face:
+	    - Adjusting and adding methods to paintPanel/View
+
+Nov 6,2024
+	What I did yesterday:
+	    - Add dark mode
+	What I will do today:
+	    - Add new user story
+	    - Handle merges/pull requests
+	    - Fix dark mode bugs add sub window dark mode.
+	    - Add outlineColor method
+	    - Add bezier curve feedback
+	    - Fix merge bugs
+	    - Add new bug to backlogs
+	Obstacles I face:
+	    - N/A
+
+Nov 7,2024
+	What I did yesterday:
+	- Add new user story
+        - Handle merges/pull requests
+        - Fix dark mode bugs add sub window dark mode.
+        - Add outlineColor method
+        - Add bezier curve feedback
+        - Fix merge bugs
+        - Add new bug to backlogs
+	What I will do today:
+	    - Add stroke width slider.
+	    - Handle merge/pull requests
+	    - Fix merge bugs
+	Obstacles I face:
+	    - Adjusting view to have space for slider.
+
+Nov 8,2024
+	What I did yesterday:
+	    - Add stroke width slider.
+        - Handle merge/pull requests
+        - Fix merge bugs
+	What I will do today:
+	    - Handle pull requests
+	    - Help with other user stories
+	Obstacles I face:
+	    - N/A
+
+Nov 9,2024
+	What I did yesterday:
+	    - Handle pull requests
+    	- Help with other user stories
+	What I will do today:
+	    - Help with other user stories
+	    - Fix merge bugs
+	Obstacles I face:
+	    - N/A
+
+Nov 10,2024
+	What I did yesterday:
+	    - Help with other user stories
+        - Fix merge bugs
+	What I will do today:
+	    - Help clean up code and add last minute changes.
+	    - Add to extraFeatures.txt and architecture.txt
+	Obstacles I face:
+	    -N/A
+
+Nov 11,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 12,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 13,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 14,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+

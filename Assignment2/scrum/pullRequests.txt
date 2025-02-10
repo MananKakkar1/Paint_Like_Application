@@ -1,0 +1,23 @@
+BUG2.003    author:linryan5     puller:sperneac   status:Accepted
+ US2.014    author:sperneac     puller:linryan5   status:Rejected
+ US2.015    author:kakkarm2     puller:linryan5   status:Rejected
+ US2.015    author:kakkarm2     puller:abouzah7   status:Accepted
+ US1.013    author:kakkarm2     puller:linryan5   status:Accepted
+ US2.016    author:kakkarm2     puller:abouzah7   status:Accepted
+ US2.014    author:sperneac     puller:kakkarm2   status:Accepted
+ US2.017    author:kakkarm2     puller:abouzah7   status:Accepted
+ BUG.004    author:abouzah7     puller:kakkarm2   status:Accepted
+ US3.006    author:linryan5     puller:kakkarm2   status:Accepted
+BUG.004R    author:abouzah7     puller:kakkarm2   status:Accepted
+ US3.005    author:linryan5     puller:sperneac   status:Accepted
+ US4.005    author:sperneac     puller:kakkarm2   status:Accepted
+ US4.007    author:kakkarm2     puller:sperneac   status:Accepted
+ US2.018    author:kakkarm2     puller:linryan5   status:Accepted
+ US2.019    author:kakkarm2     puller:sperneac   status:Accepted
+BUG2.005    author:kakkarm2     puller:sperneac   status:Accepted
+ US5.003    author:linryan5     puller:kakkarm2   status:Accepted
+BUG2.001    author:linryan5     puller:sperneac   status:Accepted
+ US4.008    author:sperneac     puller:linryan5   status:Accepted
+BUG4.001    author:linryan5     puller:sperneac   status:Accepted
+ US.007     author:kakkarm2     puller:linryan5   status:Accepted
+ US4.009    author:sperneac     puller:kakkarm2   status:Accepted

@@ -1,0 +1,587 @@
+# User Stories/Bugs (add as appropriate), modify at each Sprint Planning Meeting
+# If a USER STORY is large, break it into smaller user stories.
+# For example: Draw Circle was split into two user stories US1.010 and US1.011
+# 
+# For example, the color chooser user story involves: 
+# 1 Color chooser UI (which could be a USER STORY)
+# 2 Implementation of selected color into the drawing stream.
+# 
+# The naming convention is USs.stp s is the sprint number this user story
+# appears in. s is the sprint that introduced the user story, 
+# t is a topic number, and p is the parts that the topic is
+# divided into (for larger user stories).
+#
+# Please change the status of the user story/bug to 
+#     NotStarted,InProgress, Incomplete,Complete
+# as appropriate.
+--------------------------------------------------------------------------
+# Completed USER STORIES/BUGS BELOW ###########################################
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.018 : kakkarm2 : Complete
+NAME     : UI Overhaul
+PRIORITY : 4
+ESTIMATE : 3 days   ACTUAL : 2 days
+AS A     : user
+I WANT   : the UI to look nice. Right now, it has buttons all over the
+           place.
+           Also implement color picker as a dropdown menu to reduce space
+           for choosing colors in the area of the buttons.
+
+SO THAT  : the UI is pleasant to look at and it is convenient for the user
+    `      to use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US?.007 : sperneac + kakkarm2 : Complete
+NAME     : Line thickness selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined
+           	rectangle as well as two thickly outlined rectangles and a
+           	thick squiggle.
+SO THAT  :
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US5.003 : linryan5 : Complete
+NAME     : Final model architecture
+PRIORITY : 3
+ESTIMATE : 3 days    ACTUAL : 2-3 days
+AS A     : user
+I WANT   : To have a better implementation of model. Currently PaintModel
+           implementation is still the same as the previous iterations,
+           so this US is dedicated to rearchitecturing the model, as well
+           as clean up the other architecture in the program (notably, the
+           command structure is still very wonky).
+SO THAT  : I can easily implement more features, and have cleaner code to
+           view.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.005 : kakkarm2 : Complete
+NAME     : Fill Button Defaulting Color to Black
+PRIORITY : 4
+ESTIMATE : 1 hour     ACTUAL : 30 minutes
+ISSUE    : Currently, when selecting the toggle button for fill, the
+           button defaults to the color black, instead it should switch to
+           the current selected color.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.001 : linryan5 : Complete
+NAME     : Previous mode selection
+PRIORITY : 2
+ESTIMATE : 1 day.     ACTUAL : < 1 hour
+ISSUE    : Currently, when selecting things such as undo, redo, or trying
+           to select a new color, I have to reselect the shape I was using
+           previously. This feels very counterintuitive to use, and would
+           like this changed so that the program remembers what the
+           previous selection was.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.009 : sperneac : Complete
+NAME     : File saving and loading to computer
+PRIORITY : 4
+ESTIMATE : 1 hours    ACTUAL : 45 minutes
+AS A     : user
+I WANT   : to be able to save files to the computer instead of only
+           saving them temporarily in the program.
+SO THAT  : I can preserve my beautiful artwork even when the program
+           is not open.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.008 : sperneac : Complete
+NAME     : ShapeChooserButtons feedback
+PRIORITY : 4
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : The button to show a preview of what shape will be drawn
+           along with the color and fill.
+SO THAT  : I can see what the shape will look like before being drawn.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.007 : kakkarm2 : Complete
+NAME     : Bézier curves feedback
+PRIORITY : 4
+ESTIMATE : 2 hours    ACTUAL : 30 minutes
+AS A     : user
+I WANT   : To be able to see the original line.
+SO THAT  : I can get a better idea of what the final Bezier curve will
+           look like.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.005 : sperneac : Complete
+NAME     : Bézier curves
+PRIORITY : 4
+ESTIMATE : 1 hours    ACTUAL : 30 minutes
+AS A     : user
+I WANT   : To click to select a start and end point of a line,
+           then click again twice to curve the line.
+SO THAT  : I can draw Bezier curves.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.019 : kakkarm2 : Complete
+NAME     : Dark Mode
+PRIORITY : 4
+ESTIMATE : 6 hours    ACTUAL : 3 hours
+AS A     : user
+I WANT   : the user to be able to pick between light mode and dark mode.
+
+SO THAT  : the UI's theme can be chosen at the user's preference.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.001 : linryan5 : Complete
+NAME     : Feedback is weird
+PRIORITY : 2
+ESTIMATE : 1 day     ACTUAL : 2 hours
+ISSUE    : Feedback seems to be mirrored when attempting to draw in the
+           opposite direction of where the shape is growing. Most obvious
+           in the triangle shape, but also present in the rectangle shape
+           as well.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.001 : abouzah7 : Complete
+NAME     : Icons instead of text for drawing mode selection
+PRIORITY : 1
+ESTIMATE : 1 hour     ACTUAL : 20 minutes
+AS A: user
+I WANT   : As the user is selecting the icon they want, it should be a
+           shape.
+SO THAT  : It is more intuitive for the user, perhaps the user may not
+           understand English, so a shape would be more intuitive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.002 : kakkarm2 : Complete
+NAME     : Drawing selection mode not indicated
+PRIORITY : 1
+ESTIMATE : 1 hour     ACTUAL : 15 minutes
+ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is there a way
+           to highlight the currently selected mode?.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.006 : linryan5 : Complete
+NAME     : Circle drawing is broken
+PRIORITY : 1
+ESTIMATE : 1 day      ACTUAL : < 1 hour
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.005 : sperneac : Complete
+NAME     : Squiggle is broken
+PRIORITY : 1
+ESTIMATE : 1 hour     ACTUAL : 1 hour
+ISSUE    : Squiggles are connected to each other by a straight line. Each
+           drag of the mouse should be a separate squiggle. Possibly
+           the issue is with the representation of the squiggles in the
+           Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.006 : linryan5 : Complete
+NAME     : Circle drawing is broken
+PRIORITY : 1
+ESTIMATE : 1 day      ACTUAL : < 1 hour
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.001 : rosenbl6 : Complete
+NAME     : Draw Circle
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.002 : linryan5 : Complete
+NAME     : Draw Circle Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : < 1 hour
+AS A     : user
+I WANT   : As a user is specifying a Circle, during the drag, a 'current'
+           circle should be on display. As the user drags, the 'current'
+           circle changes in real time so that a circle is drawn with
+           centre at users initial circle click, with radius out to
+           the current dragged mouse position.
+SO THAT  : I can see the circle I am about to build on release of the
+           mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.003 : sperneac : Complete
+NAME     : Draw Rectangle
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL : 30 minutes
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to
+		   specify two corners of a rectangle to be drawn in the current
+		   style.
+SO THAT  : I can add rectangles to my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.004 : sperneac : Complete
+NAME     : Draw Rectangle Feedback
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL : 30 minutes
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the rectangle in
+           mid-construction.
+SO THAT  : I can see the rectangle I am about to build on release of the
+           mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.013:  kakkarm2: Complete
+NAME     : Eraser tool
+PRIORITY : 3
+ESTIMATE : 3 Hours   ACTUAL : 2 Hours
+AS A     : user
+I WANT   : An eraser tool, to erase some drawings or text i may have drawn
+           on the paint board.
+SO THAT  : The user can erase things.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG?.003 : kakkarm2, linryan5, sperneac  : Complete(?)
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : linryan5 : Complete
+NAME     : Polyline does not work
+PRIORITY : 3
+ESTIMATE : 2 days     ACTUAL : 3-4 hours (across 2 days)
+ISSUE    : Polyline does not seem to have any implementation, as currently
+           , attempting to select or do anything with polyline all end up
+           with failures.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.004 : kakkarm2 : Complete
+NAME     : Shape overlapping not working correctly
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : < 1 hour
+ISSUE    : Currently, the order of overlapping of shapes and lines are
+           incorrect.
+           The previously drawn shapes/lines are overlapping the newly
+           drawn shapes/lines.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.001 : kakkarm2 : Complete
+NAME     : Squares.
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL : 30 mins
+AS A     : user
+I WANT   : To be able to click on a button to select the square, click to
+           indicate where the top left corner of the square should be,
+           drag to resize the square, and finally release the mouse button
+           to indicate that I have drawn the square.
+SO THAT  : I can add squares to my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.002 : abouzah7 : Complete
+NAME     : Ovals.
+PRIORITY : 2
+ESTIMATE : 1 hour    ACTUAL : 3 hours
+AS A     : user
+I WANT   : To be able to click on a button to select the oval tool, click
+           to specify the center of the oval, drag the mouse to resize the
+           oval, and finally release the mouse and have the program draw
+           the oval on the canvas.
+SO THAT  : I can add ovals to my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.012 : kakkarm2 : Complete
+NAME     : Select from a wide range of colors
+PRIORITY : 3
+ESTIMATE : 4 days    ACTUAL : < 1 hour
+AS A     : user
+I WANT   : To be able to use my own colors as a fill or outline by
+           specifying them via something like a color wheel, or perhaps
+           specifying the hex or RGB codes into some prompter, or perhaps
+           something like color bars.
+SO THAT  : I can choose custom colors that are not preset ones.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.014 : sperneac : Complete
+NAME     : UI Organization
+PRIORITY : 3
+ESTIMATE : 3 Hours    ACTUAL : 2 Hours
+AS A     : user
+I WANT   : The UI to be more organized and moved into better locations.
+
+SO THAT  : The drawing surface can be bigger and we can make the UI look
+           and feel better in the future.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.015 : kakkarm2 : Complete
+NAME     : Undo/Redo Button
+PRIORITY : 3
+ESTIMATE : 1 Hour    ACTUAL : 1.5 Hours
+AS A     : user
+I WANT   : Should be able to undo/redo latest drawings onto canvas.
+
+SO THAT  : It is more convenient for the user to redo or undo their work.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.016 : kakkarm2 : Complete
+NAME     : Clear Board Feature
+PRIORITY : 4
+ESTIMATE : 30 Minutes    ACTUAL : 15 Minutes
+AS A     : user
+I WANT   : to be able to clear the canvas on the click of a button.
+
+SO THAT  : it is faster to reset the canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.017 : kakkarm2 : Complete
+NAME     : New/Save/Open Feature
+PRIORITY : 4
+ESTIMATE : 4 Hour    ACTUAL : 3 Hours
+AS A     : user
+I WANT   : to be able to save the current state of the board, create a new
+           board, and open a previously saved board.
+
+SO THAT  : the user can make and manage different drawings.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.003 : kakkarm2,linryan5 : Complete
+NAME     : Draw Upright Triangle
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 days (1 hours across)
+AS A     : user
+I WANT   : To click the center of the triangle, and release for
+           a triangle to be drawn. The user should also be able to drag
+           the triangle
+           and adjust it according to their liking.
+SO THAT  : I can add triangles to the canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.004 : kakkarm2,linryan5 : Complete
+NAME     : Draw Upright Triangle Feedback
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 days (1 hours across)
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback and Draw Rectangle Feedback,
+           we should display the triangle mid-construction.
+SO THAT  : I can see the triangle I am about to build, on release of the
+           mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.001 : kakkarm2 : Complete
+NAME     : Polyline and Eraser share the same stroke style.
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : < 1 hour
+ISSUE    : Polyline and Eraser both are sharing the same color (i.e.
+           polyline's color is set to white after using the eraser).
+           Only polyline is affected by this change, eraser is still
+           erasing rather than drawing new black lines.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG?.004 : abouzah7 : Complete
+NAME     : Architecture behind Model is poor
+PRIORITY : 3
+ESTIMATE : 6 Hours    ACTUAL : 4.5 hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : linryan5 : Complete
+NAME     : Fill style selector
+PRIORITY : 3
+ESTIMATE : 4 days    ACTUAL : 2 days
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or
+           outline), to be applied to subsequent shapes. Example:
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle.
+SO THAT  :
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.006 : linryan5 : Complete
+NAME     : Color selector
+PRIORITY : 3
+ESTIMATE : 3 days    ACTUAL : 2 days
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example:
+           		selects color red
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle.
+SO THAT  :
+--------------------------------------------------------------------------
+# OMITTED USER STORIES/BUGS BELOW   ###########################################
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.005 : UTORID : NotStarted
+NAME     : Triangles, generalized.
+PRIORITY : 2
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To be able to click on a button to select the triangle tool,
+           click three times to indicate where a triangle should be, and
+           see a triangle drawn from the three points right in front of my
+           eyes.
+SO THAT  : I can add triangles to my canvas.
+OMIT R   : Poly line.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.007 : UTORID : NotStarted
+NAME     : Triangles.
+PRIORITY : 2
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To be able to click on a button to select the triangle tool,
+           click three times to indicate where a triangle should be, and
+           see a triangle drawn from the three points right in front of my
+           eyes.
+SO THAT  : I can add triangles to my canvas.
+OMIT R   : Triangles already exists.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US5.001 : linryan5 : NotStarted
+NAME     : Poly line Feedback
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : As a user, I do not see what poly line is trying to do on the
+           canvas. When the user is attempting to create their own custom
+           shape using the poly line, the lines should constantly be
+           visible so that the user is not guessing what the shape looks
+           like before finishing it.
+SO THAT  : I can see the shape I am about to build after using the
+           polyline feature.
+OMIT R   : Polyline does not need feedback; it is intuitive where the next
+           line goes.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.009 : UTORID : NotStarted
+NAME     : Select Shapes on Canvas.
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To be able to click on shapes already on the canvas, and when
+           the implementation to rotate and move shapes that are on the
+           canvas are done, be able to do that on shapes already defined
+           on the canvas.
+SO THAT  : I can change the contents of my canvas.
+OMIT R   : See US4.006.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.011 : UTORID : NotStarted
+NAME     : Make sidebar more visible.
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To be able to see where the side bar to select the paint tools
+           are so that I can easily differentiate where it is possible to
+           draw and where it is not possible to draw.
+SO THAT  : I can see my sidebar.
+OMIT R   : See US2.018.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.020 : kakkarm2 : NotStarted
+NAME     : Text Box
+PRIORITY : 4
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : the user to be able to place and type in a textbox on the
+           canvas.
+
+SO THAT  : The user can type onto the canvas.
+OMIT R   : Out of scope/time.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.021 : kakkarm2 : NotStarted
+NAME     : Image Insertion Tool
+PRIORITY : 4
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : the user to be able to add custom images onto the canvas.
+
+SO THAT  : the user can be more creative with their drawings.
+OMIT R   : Out of scope/time.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.006 : UTORID : NotStarted
+NAME     : Select tool
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL :
+AS A     : user
+I WANT   : To click and draw a rectangle to select.
+SO THAT  : I can modify or delete shapes in the selected area.
+OMIT R   : Out of scope/time.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US5.002 : linryan5 : NotStarted
+NAME     : More Shapes
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : I want to add more pre-determined shapes
+           (i.e. rather than draw a star, I want to click on a star
+           button which should automatically draw
+           the star using a similar control scheme as drawing circles.).
+SO THAT  : I can more easily draw certain shapes while still being able to
+           draw more complex shapes as I desire.
+OMIT R   : Out of scope/time.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.013 : UTORID : NotStarted
+NAME     : Start drawing shapes with them being hollow
+           and allow user to fill the shapes with a specific color they
+           want
+PRIORITY : 4
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To be able to start drawing shapes and only have an outline.
+           Allow the user to be able to fill the shapes with a color
+           of their choice using a color selector.
+
+SO THAT  : I can create shapes and let the user add details to it as they
+           wish.
+OMIT R   : Duplicate user story.
+--------------------------------------------------------------------------

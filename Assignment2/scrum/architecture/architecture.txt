@@ -1,0 +1,61 @@
+# Please discuss your architectural decisions below.
+
+High Level Architecture:
+
+	MVC
+	To keep the code simple, a partial MVC was implemented.
+	
+	Model
+	The Model captures enough information to re-draw the sketch of
+	the user.
+	
+	View+Controller
+	There is a View class as well as a few, what we call, view components.
+	The View class containing the BorderPane as well as containing all of its components.
+	View components are meant to be contained in the main View.
+	Examples of view components are PaintPanel and ShapeChooserPanel.
+	
+	The View class, and view components all implements their own controller.
+	For example, the PaintPanel listens to its own MouseEvents.
+	This is instead of separating out the Controller from the View. This choice
+	was made to simplify the code, yet still keep it modular and clear.
+	
+	Each view component can see the containing View as well as the Model
+	as appropriate. This means that each view component can speak to the
+	other view components. An example of this is when the ShapeChooserPanel
+	buttons are clicked, resulting in a mode change in the PaintPanel.
+	
+---------------------------------------------------------------------
+TODO!!! Add in more architecture and discussion. For example, 
+do you do something interesting to fix the association between the 
+ShapeChooser and the PaintPanel? How about the PaintModel, something
+is clearly wrong with it. Can you come up with a better architecture?
+
+- We are going to use a builder approach, we can streamline the creation of different shapes and streamline the creation
+of other lines such as poly lines.
+- We are going to refactor the canvas completely to allow the creation of dynamic canvases. Also streamlining some shape
+implementations such that the code is much more readable and more optimized. Another thing to add here is that we are
+going to refactor the toolbar/shape selector to the top such that it is much more clear where the canvas begins and ends
+for the user, we can do this by customizing the toolbar such as changing its colour.
+- We are going to add a redo button as well as an eraser button in the toolbar. We will also refactor that toolbar so that
+its collapsable such that it keeps the user's experience much more streamlined and simple. In the collapsed menu, we would
+only display the essential buttons to use Paint (right off the bat) to create more space for the canvas for the user.
+- We are also planning on adding textboxes such that the user can place them anywhere on the canvas and be able to type
+whatever they like. This would also require an additional button in the toolbar.
+---------------------------------------------------------------------
+
+DESIGN PATTERNS USED
+	TODO!!! If you introduce a Design Pattern to solve a problem, 
+	discuss it below. Only add design patterns if they simplify and improve
+	the code. I see at least two that would greatly improve code. 
+		
+	Strategy:
+	Command: 
+	Singleton:
+	Composite:
+	Factory:
+	Builder:
+	Observer/Observable:
+	... (any others you find useful) ...
+
+OTHER ARCHITECTURE DISCUSSIONS

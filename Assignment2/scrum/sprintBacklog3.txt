@@ -1,0 +1,146 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 3 Oct 27-Nov 03, 2024
+# Sprint 3 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : linryan5 : Complete
+NAME     : Polyline does not work
+PRIORITY : 3
+ESTIMATE : 2 days     ACTUAL : 3-4 hours (across 2 days)
+ISSUE    : Polyline does not seem to have any implementation, as currently
+           , attempting to select or do anything with polyline all end up
+           with failures.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.004 : kakkarm2 : Complete
+NAME     : Shape overlapping not working correctly
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : < 1 hour
+ISSUE    : Currently, the order of overlapping of shapes and lines are
+           incorrect.
+           The previously drawn shapes/lines are overlapping the newly
+           drawn shapes/lines.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.013:  kakkarm2: Complete
+NAME     : Eraser tool
+PRIORITY : 3
+ESTIMATE : 3 Hours Actual: 2 Hours
+AS A     : user
+I WANT   : An eraser tool, to erase some drawings or text i may have drawn
+           on the paint board.
+SO THAT  : The user can erase things.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.014 : sperneac : Complete
+NAME     : UI Redesign
+PRIORITY : 3
+ESTIMATE : 3 Hours    ACTUAL : 2 Hours
+AS A     : user
+I WANT   : The UI to be more organized and moved into better locations.
+
+SO THAT  : The drawing surface can be bigger and we can make the UI look
+           and feel better in the future.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.015 : kakkarm2 : Complete
+NAME     : Undo/Redo Button
+PRIORITY : 3
+ESTIMATE : 1 Hour    ACTUAL : 1.5 Hours
+AS A     : user
+I WANT   : Should be able to undo/redo latest drawings onto canvas.
+
+SO THAT  : It is more convenient for the user to redo or undo their work.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.016 : kakkarm2 : Complete
+NAME     : Clear Board Feature
+PRIORITY : 4
+ESTIMATE : 30 Minutes    ACTUAL : 15 Minutes
+AS A     : user
+I WANT   : to be able to clear the canvas on the click of a button.
+
+SO THAT  : it is faster to reset the canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.017 : kakkarm2 : Complete
+NAME     : New/Save/Open Feature
+PRIORITY : 4
+ESTIMATE : 4 Hour    ACTUAL : 3 Hours
+AS A     : user
+I WANT   : to be able to save the current state of the board, create a new
+           board, and open a previously saved board.
+
+SO THAT  : the user can make and manage different drawings.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG?.004 : abouzah7 : Complete
+NAME     : Architecture behind Model is poor
+PRIORITY : 3
+ESTIMATE : 6 Hours    ACTUAL : 4.5 hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.001 : kakkarm2 : Complete
+NAME     : Polyline and Eraser share the same stroke style.
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : < 1 hour
+ISSUE    : Polyline and Eraser both are sharing the same color (i.e.
+           polyline's color is set to white after using the eraser).
+           Only polyline is affected by this change, eraser is still
+           erasing rather than drawing new black lines.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : linryan5 : Complete
+NAME     : Fill style selector
+PRIORITY : 3
+ESTIMATE : 4 days    ACTUAL : 2 days
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or
+           outline), to be applied to subsequent shapes. Example:
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle.
+SO THAT  :
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.006 : linryan5 : Complete
+NAME     : Color selector
+PRIORITY : 3
+ESTIMATE : 3 days    ACTUAL : 2 days
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example:
+           		selects color red
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle.
+SO THAT  :
+--------------------------------------------------------------------------
