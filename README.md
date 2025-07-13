@@ -1,4 +1,4 @@
-# 🎨 Paint-Like Application
+# 🎨 Paintly
 
 ## 📝 Project Overview
 
